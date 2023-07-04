@@ -5,8 +5,8 @@ body{
     text-align: center;
 }
 
-header{
-
+h1{
+    text-shadow: 1px 1px 5px black;
 }
 
 section{
@@ -19,11 +19,12 @@ section{
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.363);
 }
 
-footer{
-
+div{
+    padding: 8px;
 }
 
 a{
+    text-shadow: 1px 1px 5px black;
     text-decoration: none;
     color: white;
 }
