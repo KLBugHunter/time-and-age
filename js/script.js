@@ -18,3 +18,24 @@ function carregar() {
         document.body.style.backgroundColor = '#02314b'
     }
 }
+
+function verificar(){
+    var data = new Date()
+    var ano = data.getFullYear()
+    var fano = document.getElementById('txtano')
+    var res = document.getElementById('res')
+    if (fano.value.length == 0 || Number(fano.value) > ano){
+        window.alert('[ERROR] Check the data and try again!')
+    } else {
+        var fsex = document.getElementsByTagName('radsex')
+        var idade = ano - Number(fano.value)
+        var gênero = ''
+        if (fsex[0].checked){
+            gênero = 'Male'
+        } else if (fsex[1].checked){
+            gênero = 'Female'
+        }
+        res.innerHTML = `We detect an ${idade} years old ${gênero}.`
+    } 
+}
+

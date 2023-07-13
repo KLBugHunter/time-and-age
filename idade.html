@@ -13,19 +13,32 @@
     </header>
 
     <section>
-        <div id="msg">
-            Your age is ()
+        <div>
+            <p>year of birth: 
+                <input type="number" name="txtano" id="txtano" min="0">
+            </p>
+            <p>gender:
+                <input type="radio" name="radsex" id="masc">
+                <label for="masc">Masculine</label>
+                <input type="radio" name="radsex" id="fem">
+                <label for="fem">Feminine</label>
+                <input type="radio" name="radsex" id="nb">
+                <label for="nb">Non-binary</label>
+            </p>
+            <p>
+                <input type="button" value="verificar" onclick="verificar()">
+            </p>
         </div>
-        <div id="foto">
-            <img id="imagem02" src="" alt="">
+        <div id="res">
+            fill in the details above to see the result!
         </div>
     </section>
 
     <footer>
-        <p><a href="https://github.com/KamillyLLopes" target="_blank"><abbr title="Visit me on GitHub">&#x23F0; Kamilly Lopes</abbr></a></p>
+        <p><a href="https://github.com/KamillyLLopes" target="_blank"><abbr title="Visit me on GitHub">&#x1F382; Kamilly Lopes</abbr></a></p>
 
         <p><a href="index.html">&lt; Check the time here!</a></p>
     </footer>
-    <script src="js/script02.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
