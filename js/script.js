@@ -30,11 +30,20 @@ function verificar(){
         var fsex = document.getElementsByTagName('radsex')
         var idade = ano - Number(fano.value)
         var gênero = ''
+        var img = document.createElement('img')
+        img.setAttribute('id', 'foto')
+
         if (fsex[0].checked){
             gênero = 'Male'
+
         } else if (fsex[1].checked){
             gênero = 'Female'
+
+        } else (fsex[2].checked);{
+            gênero = 'Non-binary '
+
         }
+
         res.innerHTML = `We detect an ${idade} years old ${gênero}.`
     } 
 }
