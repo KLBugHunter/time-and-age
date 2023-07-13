@@ -27,7 +27,7 @@ function verificar(){
     if (fano.value.length == 0 || Number(fano.value) > ano){
         window.alert('[ERROR] Check the data and try again!')
     } else {
-        var fsex = document.getElementsByTagName('radsex')
+        var fsex = document.getElementsByName('radsex')
         var idade = ano - Number(fano.value)
         var gênero = ''
         var img = document.createElement('img')
@@ -35,16 +35,28 @@ function verificar(){
 
         if (fsex[0].checked){
             gênero = 'Male'
-
+            if (idade < 2){
+                img.setAttribute('src', './img/bebes.png')
+            } else if (idade < 12){
+                img.setAttribute('src', './imgs/favicon.ico')
+            } else if (idade <= 19){
+                img.setAttribute('src', './img/adolecentes.png')
+            } else if (idade = 25){
+                img.setAttribute('src', './img/jovens.png')
+            } else if (idade < 50){
+                img.setAttribute('src', './img/adultes.png')
+            } else {
+                img.setAttribute('src', './img/idoses.png')
+            }
         } else if (fsex[1].checked){
             gênero = 'Female'
 
-        } else (fsex[2].checked);{
+        } else if (fsex[2].checked){
             gênero = 'Non-binary '
 
         }
-
         res.innerHTML = `We detect an ${idade} years old ${gênero}.`
+        res.appendChild(img)
     } 
 }
 
