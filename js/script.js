@@ -38,14 +38,12 @@ function verificar(){
             if (idade < 2){
                 img.setAttribute('src', './img/bebes.png')
             } else if (idade < 12){
-                img.setAttribute('src', './imgs/favicon.ico')
-            } else if (idade <= 19){
                 img.setAttribute('src', './img/adolecentes.png')
-            } else if (idade = 25){
+            } else if (idade <= 19){
+                img.setAttribute('src', './img/criancas.png')
+            } else if (idade > 20 && idade <=30){
                 img.setAttribute('src', './img/jovens.png')
-            } else if (idade < 50){
-                img.setAttribute('src', './img/adultes.png')
-            } else {
+            } else if (idade > 50){
                 img.setAttribute('src', './img/idoses.png')
             }
         } else if (fsex[1].checked){
